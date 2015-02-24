@@ -9,7 +9,7 @@
 .redcol {color:#560000; font-weight:bold;  font-size:20px; font-style:italic;}
 
 .block-0{  height: 669px; background:url("../images/hyqccut.jpg") center 0 no-repeat; background:grey;}
-.block-1{  height: 927px; background:url("../images/hyqccut-02.jpg") center 0 no-repeat; background:red;}
+.block-1{  height: 927px; background:url("../images/hyqccut-02.jpg") center 0 no-repeat; background:#777;}
 .block-2{  height: 676px; background:url("../images/hyqccut-03.jpg") center 0 no-repeat; background:green;}
 
 .pop-box a { display:inline-block; background:url("../images/pp2.png") 0 0 no-repeat; width:72px; height:22px; margin-left:10px; color:#333;  line-height:22px; margin-bottom:10px;}
@@ -38,6 +38,11 @@ top: 1px;}
 .labsc {background:url("../images/form-icon-04.png") 7px -42px no-repeat; padding-left:44px; height:38px; line-height:38px; margin-right:28px;width: 70px;}
 .labsc input {position:absolute; left:-999em; *top:0;}
 .labsc span {font-size:24px; color:#5d5d5d;}
+
+.selectstyle {position:relative; border:0px solid #ccc; height:30px;display:inline-block;line-height:30px; width:100px; overflow:hidden; }
+.selectstyle select {position:absolute;left:0; top:0px; height:30px; margin:0; padding:0; width:100%; height:38px; }
+.selectstyle .val {display:block;}
+
 .labsc-select {background:url("../images/form-icon-04.png") 7px 5px no-repeat;}
 .form-bk-select {background:url("../images/form-icon-02.png") right 1px no-repeat #d2d2d2; width:712px; height:40px; position:relative;}
 .form-bk-select select {width:712px; height:40px; opacity:0; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; position:absolute;left:0; top:0; font-size:18px; }
