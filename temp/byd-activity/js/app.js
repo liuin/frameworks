@@ -16,6 +16,5 @@ requirejs(['jquery/jquery-1.11.2','js/js'],
 function   ($,subjs) {
     //jQuery, canvas and the app/sub module are all
     //loaded and can be used here now.
-    var $ = $;
-    console.log($);
+    alert($());
 });
