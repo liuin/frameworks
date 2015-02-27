@@ -7,10 +7,8 @@
   obj.each(function (n) {
       dataFormType($(this));
   })
-
 */
-
-define("formSelect", ["jquery"], function ($) {
+(function() {
   var formSting = '[data-form="select"]';
   var Select = function  (number) {
     this.id = number;
@@ -32,9 +30,6 @@ define("formSelect", ["jquery"], function ($) {
     $this.trigger('change.resize');
   }
 
-
-
-
   function Plugin(option) {
     return this.each(function (n) {
       var $this   = $(this)
@@ -50,9 +45,20 @@ define("formSelect", ["jquery"], function ($) {
   Select.init = function  () {
      var $this = $(formSting);
       Plugin.call($this,'build');
-
   }
-  return Select;
 
-});　
+  //AMD格式
+  if ( typeof define === "function" && define.amd ) {
+    define( "formSelect", ["jquery"], function($) {
+      return Select;
+    });
+  }
+})()
+
+
+
+
+
+
+
  

@@ -1,0 +1,90 @@
+body, html {
+  background: #999;
+  height: 100%;
+}
+
+.view-container {
+  height: 100%;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #eee;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  min-width: 640px;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+/*-- loading --*/
+.loading {
+  background-color: rgba(102, 102, 102, 0.95);
+  z-index: 9999999999;
+  position: fixed;
+  height: 28px;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -73px;
+  width: 100px;
+  text-align: center;
+}
+
+.loading i {
+  overflow: hidden;
+  z-index: 100;
+  font-size: 30px;
+  color: #fff;
+  line-height: 32px;
+  vertical-align: middle;
+}
+
+.loading span {
+  height: 48px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: white;
+  line-height: 31px;
+  vertical-align: middle;
+}
+
+.loading-wrap {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.68);
+  z-index: 110;
+}
+
+.loading-wrap {
+  background: transparent;
+}
+
+/*.container*/
+.view-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #4cae4c;
+}
+.inpage-container {
+  background: #007aff;
+}

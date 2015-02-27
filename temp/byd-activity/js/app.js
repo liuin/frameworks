@@ -7,14 +7,28 @@ requirejs.config({
     //never includes a ".js" extension since
     //the paths config could be for a directory.
     paths: {
-        js: '../temp/byd-activity/js'
+        jquery:'jquery/jquery-1.11.2',
+        formSelect: 'cukiui/formSelect'
+    },
+   
+    shim: {
+        /*
+        "jquery/jquery-1.11.2" : {
+            exports : "$"
+        },
+        */
+        "formSelect" : {
+            deps : ["jquery"]
+        }
     }
+   
 });
 
 // Start the main app logic.
-requirejs(['jquery/jquery-1.11.2','js/js'],
-function   ($,subjs) {
-    //jQuery, canvas and the app/sub module are all
-    //loaded and can be used here now.
-    alert($());
+requirejs(['jquery','formSelect'],
+function   ($,formSelect) {
+    //selectform
+    formSelect.init();
 });
+
+
