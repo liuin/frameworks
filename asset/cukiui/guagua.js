@@ -85,7 +85,12 @@ radgrad.addColorStop(0, 'rgba(0,0,0,1)');
 radgrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
 ctx.fillStyle = radgrad;
 
-
+if (getTransparentPercent(ctx,w,h)>90) {
+  if (ctopc) {
+    callper();
+    ctopc=false;
+  }
+}
 
 arc(x, y, 30, 0, Math.PI * 2);
 //ctx.clearRect(x, y, 440, 440);
