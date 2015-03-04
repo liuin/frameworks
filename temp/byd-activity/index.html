@@ -24,116 +24,110 @@
 
     <div class="block-1 yh" id="block-1">
       <div class="step1-bk w1000 ">
-            <form action="http://mall.bydauto.com.cn/index.php/drive/index/submit/" method="post">
-                 <input name="redirect_url" value="i2015/index/wtorder" type="hidden">
-                <fieldset style="display:none;">
-                 <input name="memo" value="" /><!-- 传递所选车型级预约试驾 -->
-                 <input name="channel_id" value="zijian_tuan_fj-gx-gz-yn" readonly /> <input name="channel_name" value="自建商城不1羊的2015惠更好" readonly />
-                 <input name="prov_name" value="" />
-                 <input name="city_name" value="" />
-                 <input name="sellpoint_name" value="" />
-                 <input name="type_name" value="" />
-                 <input id="prov" name="prov" required value="" /> <label for="prov">省</label>
-                 <input id="city" name="city" required value=""/> <label for="city">市</label>
-                </fieldset>   
-
-            <fieldset>
-              <legend class="none">填写相关信息</legend>
-              <div class="car-type form-bk clearfix">
-                <span  class="lb1 fl" for="type">车型<i></i></span>
-                <div id="" class="fl form-bk-select">
-                  <span class="select-val" id="">请选择车型</span>
-                  <select id="type" class="yh" name="type" required="required" ><option value="">请选择车型</option></select>
-                </div>
-                
-
-              </div>
-              <div class="biz form-bk clearfix">
-                <label for="sellpoint" class="lb1 fl">选择经销商<i></i></label>
-                <select id="sellpoint" class=" yh" data-form="select" name="sellpoint" required="required">
-                    <option value="1">选择经销商1</option>
-                    <option value="2">选择经销商2</option>
-                    <option value="3">选择经销商3</option>
-                  </select>
-              </div>
-              <div class="clear"></div>
-              <div class="name form-bk clearfix fl" style="width:374px; margin-right:30px; *margin-right:28px;">
-                <label for="name" class="lb1 fl" >姓名<i></i></label>
-                <div id="" class="fl text-box">
-                  <input id="name" class="yh" name="name" required /> 
-                </div>
-              </div>
-              <div class="contec form-bk fl" style="width:463px;">
-                <label for="phone" class="lb1 fl" >联系方式<i></i></label>
-                <div id="" class="fl text-box" style="width:278px;">
-                  <input id="phone" class="yh" name="phone" type="text" placeholder="请填写11位手机号码" required="required" minlength="11" maxlength="11" />
-                </div>
-              </div>
-              <div class="clear"></div>
-              <div class="name form-bk clearfix fl" style="width:863px; margin-right:30px;">
-                <label for="address" class="lb1 fl"  >地址<i></i></label>
-                <div id="" class="fl text-box" style="width:683px;">
-                   <input id="address" class="yh" name="address" maxlength="255" required  placeholder="参加活动，好评送好礼，礼品将按此地址寄出" />
-                </div>
-              </div>
-              <div class="clear"></div>
-              <div class="fouc form-bk clearfix none" >
-                <label class="lb1 fl">关注车型<span class="spos">车型优惠咨询第一时间获取</span><i></i></label>
-                <div id="" class="fl" style="width: 775px; padding-left: 25px;">
-                  <label class="labsc fl" for="qin-ck"><span class="">秦</span><input type="checkbox" name="ck[]" id="qin-ck" value="qin" /></label>
-                  <label class="labsc fl" for="sirui-ck" ><span class="">思锐</span><input id="sirui-ck" type="checkbox" name="ck[]"  value="思锐" /></label>
-                  <label class="labsc fl" for="surui-ck" ><span class="">速锐</span> <input type="checkbox" name="ck[]" id="surui-ck" value="速锐" /></label>
-                  <label class="labsc fl" for="g6-ck" ><span class="">G6</span><input type="checkbox" name="ck[]" id="g6-ck" value="G6" /></label>
-                  <label class="labsc fl" for="s6-ck" ><span class="">S6</span><input type="checkbox" name="ck[]" id="s6-ck" value="S6" /></label>
-                  <label class="labsc fl" for="l3-ck" ><span class="">L3</span><input type="checkbox" name="ck[]" id="l3-ck" value="L3" /></label>
-                  <label class="labsc fl" for="g3-ck" ><span class="">G3</span><input type="checkbox" name="ck[]" id="g3-ck" value="G3" /></label>
-                  <label class="labsc fl" for="f3-ck" ><span class="">F3</span><input type="checkbox" name="ck[]" id="f3-ck" value="F3" /></label>
-                  <label class="labsc fl" for="g3r-ck" ><span class="">G3R</span><input type="checkbox" name="ck[]" id="g3r-ck" value="G3R" /></label>
-                  <label class="labsc fl" for="f0-ck" ><span class="">F0</span><input type="checkbox" name="ck[]" id="f0-ck" value="F0" /></label>
-                  <label class="labsc fl" for="f6-ck" ><span class="">F6</span><input type="checkbox" name="ck[]" id="f6-ck" value="F6" /></label>
-                  <label class="labsc fl" for="f3r-ck" ><span class="">F3R</span><input type="checkbox" name="ck[]" id="f3r-ck" value="F3R" /></label>
-                  <label class="labsc fl" for="e6-ck" ><span class="">e6</span><input type="checkbox" name="ck[]" id="e6-ck" value="e6" /></label>
-                  <label class="labsc fl" for="f3dm-ck"><span class="">F3DM</span><input type="checkbox" name="ck[]" id="f3dm-ck" value="F3DM" /></label>
-                  <label class="labsc fl" for="nm6-ck"><span class="">新M6</span><input type="checkbox" name="ck[]" id="nm6-ck" value="新M6" /></label>
-                </div>
-              </div>
-            </fieldset>
-            <div class="form-bt ">
-              <button type="submit"><img src="http://mall.bydauto.com.cn/skin/frontend/default/test/bib17/images/gcyh-bt.png" alt="查看购车优惠" /></button>
+        <form action="http://mall.bydauto.com.cn/index.php/drive/index/submit/" method="post">
+          <input name="redirect_url" value="i2015/index/wtorder" type="hidden">
+          <fieldset style="display:none;">
+            <input name="memo" value="" /><!-- 传递所选车型级预约试驾 -->
+            <input name="channel_id" value="zijian_tuan_fj-gx-gz-yn" readonly /> <input name="channel_name" value="自建商城不1羊的2015惠更好" readonly />
+            <input name="prov_name" value="" />
+            <input name="city_name" value="" />
+            <input name="sellpoint_name" value="" />
+            <input name="type_name" value="" />
+            <input id="prov" name="prov" required value="" /> <label for="prov">省</label>
+            <input id="city" name="city" required value=""/> <label for="city">市</label>
+          </fieldset>
+        <fieldset>
+          <legend class="none">填写相关信息</legend>
+          <div class="car-type form-bk clearfix">
+            <span  class="lb1 fl" for="type">车型<i></i></span>
+            <div id="" class="fl form-bk-select">
+              <span class="select-val" id="">请选择车型</span>
+              <select id="type" class="yh" name="type" required="required" ><option value="">请选择车型</option></select>
             </div>
-          </form>
-          
-        </div>
-    </div>
-
-    <div class="block-2 yh">
-      <div class="w1000">
-        <ul class="list-new1 yh">
-          <li><span class="list-new1-count">1</span>本次活动车型配置以官网为准，活动车型以店内实车为准；</li>
-          <li><span class="list-new1-count">2</span>本活动只在指定的网销授权店使用，具体名单可在活动页面查询；</li>
-          <li><span class="list-new1-count">3</span>此活动不与其他线上活动及线下商家优惠叠加；已在店面下单的客户谢绝，敬请理解；</li>
-          <li><span class="list-new1-count">4</span>购车成功从提车日起一年内可在本车保养时免费享受原厂机油，此服务不可供其他车辆使用；</li>
-          <li><span class="list-new1-count">5</span>宝贝不包含贴膜和更换机油所耗工时费，工时费需自行承担，收费标准以指定4S店为准；</li>
-          <li><span class="list-new1-count">6</span>凡符合条件者，比亚迪e购商城将于5月中旬统一寄出好评礼品；</li>
-          <li><span class="list-new1-count">7</span>活动定金不抵扣购车款，不予返还，拍下商品前请咨询在线客服，商品一旦拍下，即表示您已接受本次活动的所有条款，请慎重！</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- <div class="block-7">
-      <div class="w1000">
-        <div class="qqbk yh">
-          <div class="hd clearfix">
-            <img class="fl png" width="70" src="http://mall.bydauto.com.cn/skin/frontend/default/test/2014xian/images/qqft.png" alt="" />
-            <div class="link">
-              <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA0OTQ4Nl82NTgyM184MDAwNDk0ODZf"></script>
-            </div>
-            <p>请联系QQ在线客服 !</p>
           </div>
+          <div class="biz form-bk clearfix">
+            <label for="sellpoint" class="lb1 fl">选择经销商<i></i></label>
+            <select id="sellpoint" class=" yh" data-form="select" name="sellpoint" required="required">
+                <option value="1">选择经销商1</option>
+                <option value="2">选择经销商2</option>
+                <option value="3">选择经销商3</option>
+              </select>
+          </div>
+          <div class="clear"></div>
+          <div class="name form-bk clearfix fl" style="width:374px; margin-right:30px; *margin-right:28px;">
+            <label for="name" class="lb1 fl" >姓名<i></i></label>
+            <div id="" class="fl text-box">
+              <input id="name" class="yh" name="name" required /> 
+            </div>
+          </div>
+          <div class="contec form-bk fl" style="width:463px;">
+            <label for="phone" class="lb1 fl" >联系方式<i></i></label>
+            <div id="" class="fl text-box" style="width:278px;">
+              <input id="phone" class="yh" name="phone" type="text" placeholder="请填写11位手机号码" required="required" minlength="11" maxlength="11" />
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="name form-bk clearfix fl" style="width:863px; margin-right:30px;">
+            <label for="address" class="lb1 fl"  >地址<i></i></label>
+            <div id="" class="fl text-box" style="width:683px;">
+               <input id="address" class="yh" name="address" maxlength="255" required  placeholder="参加活动，好评送好礼，礼品将按此地址寄出" />
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="fouc form-bk clearfix none" >
+            <label class="lb1 fl">关注车型<span class="spos">车型优惠咨询第一时间获取</span><i></i></label>
+            <div id="" class="fl" style="width: 775px; padding-left: 25px;">
+              <label class="labsc fl" for="qin-ck"><span class="">秦</span><input type="checkbox" name="ck[]" id="qin-ck" value="qin" /></label>
+              <label class="labsc fl" for="sirui-ck" ><span class="">思锐</span><input id="sirui-ck" type="checkbox" name="ck[]"  value="思锐" /></label>
+              <label class="labsc fl" for="surui-ck" ><span class="">速锐</span> <input type="checkbox" name="ck[]" id="surui-ck" value="速锐" /></label>
+              <label class="labsc fl" for="g6-ck" ><span class="">G6</span><input type="checkbox" name="ck[]" id="g6-ck" value="G6" /></label>
+              <label class="labsc fl" for="s6-ck" ><span class="">S6</span><input type="checkbox" name="ck[]" id="s6-ck" value="S6" /></label>
+              <label class="labsc fl" for="l3-ck" ><span class="">L3</span><input type="checkbox" name="ck[]" id="l3-ck" value="L3" /></label>
+              <label class="labsc fl" for="g3-ck" ><span class="">G3</span><input type="checkbox" name="ck[]" id="g3-ck" value="G3" /></label>
+              <label class="labsc fl" for="f3-ck" ><span class="">F3</span><input type="checkbox" name="ck[]" id="f3-ck" value="F3" /></label>
+              <label class="labsc fl" for="g3r-ck" ><span class="">G3R</span><input type="checkbox" name="ck[]" id="g3r-ck" value="G3R" /></label>
+              <label class="labsc fl" for="f0-ck" ><span class="">F0</span><input type="checkbox" name="ck[]" id="f0-ck" value="F0" /></label>
+              <label class="labsc fl" for="f6-ck" ><span class="">F6</span><input type="checkbox" name="ck[]" id="f6-ck" value="F6" /></label>
+              <label class="labsc fl" for="f3r-ck" ><span class="">F3R</span><input type="checkbox" name="ck[]" id="f3r-ck" value="F3R" /></label>
+              <label class="labsc fl" for="e6-ck" ><span class="">e6</span><input type="checkbox" name="ck[]" id="e6-ck" value="e6" /></label>
+              <label class="labsc fl" for="f3dm-ck"><span class="">F3DM</span><input type="checkbox" name="ck[]" id="f3dm-ck" value="F3DM" /></label>
+              <label class="labsc fl" for="nm6-ck"><span class="">新M6</span><input type="checkbox" name="ck[]" id="nm6-ck" value="新M6" /></label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-bt ">
+          <button type="submit"><img src="http://mall.bydauto.com.cn/skin/frontend/default/test/bib17/images/gcyh-bt.png" alt="查看购车优惠" /></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="block-2 yh">
+    <div class="w1000">
+      <ul class="list-new1 yh">
+        <li><span class="list-new1-count">1</span>本次活动车型配置以官网为准，活动车型以店内实车为准；</li>
+        <li><span class="list-new1-count">2</span>本活动只在指定的网销授权店使用，具体名单可在活动页面查询；</li>
+        <li><span class="list-new1-count">3</span>此活动不与其他线上活动及线下商家优惠叠加；已在店面下单的客户谢绝，敬请理解；</li>
+        <li><span class="list-new1-count">4</span>购车成功从提车日起一年内可在本车保养时免费享受原厂机油，此服务不可供其他车辆使用；</li>
+        <li><span class="list-new1-count">5</span>宝贝不包含贴膜和更换机油所耗工时费，工时费需自行承担，收费标准以指定4S店为准；</li>
+        <li><span class="list-new1-count">6</span>凡符合条件者，比亚迪e购商城将于5月中旬统一寄出好评礼品；</li>
+        <li><span class="list-new1-count">7</span>活动定金不抵扣购车款，不予返还，拍下商品前请咨询在线客服，商品一旦拍下，即表示您已接受本次活动的所有条款，请慎重！</li>
+      </ul>
+    </div>
+  </div>
+  <!-- <div class="block-7">
+    <div class="w1000">
+      <div class="qqbk yh">
+        <div class="hd clearfix">
+          <img class="fl png" width="70" src="http://mall.bydauto.com.cn/skin/frontend/default/test/2014xian/images/qqft.png" alt="" />
+          <div class="link">
+            <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA0OTQ4Nl82NTgyM184MDAwNDk0ODZf"></script>
+          </div>
+          <p>请联系QQ在线客服 !</p>
         </div>
       </div>
-    </div> -->
-
-    <script data-main="js/app.js" src="../../asset/require/require.js"></script>
+    </div>
+  </div> -->
+  <script data-main="js/app.js" src="../../asset/require/require.js"></script>
   </body>
 </html>

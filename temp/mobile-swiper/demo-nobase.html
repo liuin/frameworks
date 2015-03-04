@@ -4,32 +4,39 @@
   <meta charset="utf-8">
   <title>Swiper demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
+  <link rel="stylesheet" href="../../asset/normalize/normalize-v3.css">
+  <link rel="stylesheet" href="../../asset/cukiui/effect.css"/>
   <link rel="stylesheet" href="../../asset/swiper/swiper.min.css">
   <link rel="stylesheet" href="css/css.css">
+
 </head>
 <body>
 
-<div class="swiper-container">
+<div class="swiper-container" data-iod="21">
   <div class="swiper-wrapper">
     <div class="swiper-slide swiper-move-first" style="background:#333;"></div>
     <div class="swiper-slide swiper-move-page" style="background:#666;">
-      <p class="deom-p">txt texfd</p>
-      <p class="movel">movel</p>
+      <div class="item-ground">
+        <p class="itembk tran pos-up">上滑</p>
+        <p class="itembk tran pos-down">下滑</p>
+        <p class="itembk tran pos-left opa">左进</p>
+        <p class="itembk tran pos-right opa">右次</p>
+      </div>
     </div>
     <div class="swiper-slide" style="background:#999;"></div>
     <div class="swiper-slide" style="background:#e33;"></div>
-    <div class="swiper-slide" style="background:#ac0;"></div>
+    <div class="swiper-slide" style="background:#fc0;"></div>
+    <div class="swiper-slide" style="background:#6c0;"></div>
+    <div class="swiper-slide" style="background:#4b0;"></div>
   </div>
 
   <div class="swiper-pagination"></div>
 </div>
 <div id="vio"></div>
 
-<script type="text/javascript" src="../../asset/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../asset/jquery/jquery-1.11.2.js"></script>
 <script type="text/javascript" src="../../asset/swiper/swiper.jquery.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
-
 
 </body>
 </html>

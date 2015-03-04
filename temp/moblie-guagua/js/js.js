@@ -8,18 +8,27 @@
 bodyStyle.mozUserSelect = 'none';
 bodyStyle.webkitUserSelect = 'none';
 
+var gImgbg = 'img/finance-big1.jpg'; //覆盖图片
+var gImg = 'img/banner1.jpg'; //背景图片
+
 var img = new Image();
+
+var posleft = $('#canvas1').offset().left;
+var posRight = $('#canvas1').offset().top;
 
 var canvas = document.getElementById('canvas1');
 var canvasbg = document.getElementById('canvasbg');
 
 img.addEventListener('load', function(e) {
+
 var ctx;
 var ctxbg;
 var w = 640,
 h = 320;
-var offsetX = canvas.offsetLeft,
-offsetY = canvas.offsetTop;
+var offsetX = posleft,
+offsetY = posRight;
+
+
 var mousedown = false;
 
 function getTransparentPercent(ctx, width, height) {
@@ -45,7 +54,7 @@ function layer(ctx) {
     //canvas.style.backgroundImage='url('+img.src+')';
     ctx.globalCompositeOperation = 'destination-out';
   };
-  img1.src = 'img/banner1.jpg';
+  img1.src = gImgbg;
   ctx.fillRect(0, 0, w, h);
 }
 
@@ -68,21 +77,26 @@ function eventMove(e){
   var x = (e.clientX + document.body.scrollLeft || e.pageX) - offsetX || 0,
   y = (e.clientY + document.body.scrollTop || e.pageY) - offsetY || 0;
 
-
   with(ctx) {
-    
-  beginPath();
-  var radgrad = ctx.createRadialGradient(x, y, 0, x, y, 30);
-  radgrad.addColorStop(0, 'rgba(0,0,0,1)');
-  radgrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
-  ctx.fillStyle = radgrad;
+    beginPath();
+    var radgrad = ctx.createRadialGradient(x, y, 0, x, y, 30);
+    radgrad.addColorStop(0, 'rgba(0,0,0,1)');
+    radgrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.fillStyle = radgrad;
 
-  arc(x, y, 30, 0, Math.PI * 2);
-  //ctx.clearRect(x, y, 440, 440);
-  fill();
-  }
+    arc(x, y, 30, 0, Math.PI * 2);
+    fill();
+
+    //挂卡到百分比
+   
+    if (getTransparentPercent(ctx,w,h)>90) {
+      
+    }
+
+    }
   }
 }
+
 
 canvas.width=w;
 canvasbg.width=w;
@@ -103,8 +117,10 @@ canvas.addEventListener('mouseup', eventUp);
 canvas.addEventListener('mousemove', eventMove);
 });
 
-//img.src = hideimg;
+img.src = gImg;
 
 }) (document.body.style);
 }
 
+
+guagua();
