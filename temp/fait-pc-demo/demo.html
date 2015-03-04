@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="">
+  <meta name="author" content="cuki13">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title data-ajax="title">website name</title>
+  <link rel="stylesheet" href="../../asset/normalize/normalize-v1.css"/>
+  <link rel="stylesheet" href="css/css.css"/>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="w1000 clearfix">
+    <div class="logo fl">
+      <a href="http://www.gacfiatauto.com/" target="_blank"><img src="img/fiat-fx-02.jpg" alt="" /></a>
+    </div>
+    <div class="logo fr">
+      <a href="http://www.gacfiatauto.com/" target="_blank"><img src="img/fiat-fx.jpg" alt="" /></a>
+    </div>
+  </div>
+</div><!-- /头部 -->
+
+<div class="content">
+  <div class="content-ins w1000"></div>
+</div><!-- /中部 -->
+
+<div class="footer">
+  <div class="w1000 clearfix">
+    <p class="ft-p fl">@ 2014 广汽菲亚特汽车有限公司 版权所有 湘ICP备10203474  服务热线：400-878-9999</p>
+    <div class="footer-right fr">
+      <div class="footer-fous fl">
+        <a href="http://weibo.com/gacfiat" target="_blank" class="xl icon">
+          <span>新浪</span>
+        </a>
+        <a href="javascript:void(0);" class="wx icon">
+          <span>微信</span>
+        </a>
+        <a class="footer-bt">关注</a>
+        <div class="ewm" style="display: none;">
+          <img src="images/ewm-gz.jpg" alt="">
+          <span class="gb"></span>
+        </div>
+      </div>
+      
+      <div class="share fl">
+        <a href="http://v.t.qq.com/share/share.php?url=<?=$sendlink?>&amp;title=<?=urlencode($sendcontent.$sendlink)?>&amp;pic=<?=$sendpic?>" target="_blank" class="tx icon">
+          <span>腾讯</span>
+        </a>
+        <a href="http://www.douban.com/recommend/?url=<?=$sendlink?>&amp;title=<?=urlencode($sendcontent)?>&amp;comment=<?=urlencode($sendcontent)?>&amp;pic=<?=$sendpic?>" target="_blank" class="db icon">
+          <span>豆瓣</span>
+        </a>
+        <a href="http://www.kaixin001.com/repaste/share.php?rtitle=<?=urlencode($sendcontent)?>&amp;rurl=<?=$sendlink?>&amp;rcontent=<?=urlencode($sendcontent)?>&amp;pic=<?=$sendpic?>" target="_blank" class="kx icon">
+          <span>开心</span>
+        </a>
+        <a href="http://share.renren.com/share/buttonshare.do?link=<?=$sendlink?>&amp;title=<?=urlencode($sendcontent)?>&amp;content=<?=urlencode($sendcontent)?>&amp;pic=<?=$sendpic?>" target="_blank" class="rr icon">
+          <span>人人</span>
+        </a>
+        <a href="http://v.t.sina.com.cn/share/share.php?url=<?=$sendlink?>&amp;title=<?=urlencode($sendcontent)?>&amp;pic=<?=$sendpic?>" target="_blank" class="xl icon">
+          <span>新浪</span>
+        </a>
+        <a class="footer-bt">分享</a>
+        <div class="ewm" style="display: none;">
+          <img src="images/ewm-fx.jpg" alt="">
+          <span class="gb"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /底部 -->
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>

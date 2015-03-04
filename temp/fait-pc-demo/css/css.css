@@ -1,0 +1,8 @@
+/*-- gload --*/
+body {font-size:12px;}
+.container {width:640px; margin:0 auto; position:relative; }
+.w1000 {width:1000px; margin:0 auto; border:1px solid #ccc;}
+
+.content .w1000{height:700px;}
+.footer-fous {margin-top:1em; }
+.share {margin-top:1em;}

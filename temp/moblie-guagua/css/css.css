@@ -1,0 +1,3 @@
+.view-container {width:640px; margin:0 auto; position:relative; }
+#canvas1 {position:absolute;left:0; top:30px; z-index:11;}
+#canvasbg {position:absolute;left:0;top:30px; z-index:10;}
