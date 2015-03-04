@@ -17,22 +17,30 @@ var mySwiper = new Swiper('.swiper-container', {
     slideShadows: true
   },
   onSlideChangeEnd: function (swp) {
+    if (mySwiper.activeIndex == 2) {
+      mySwiper.params.onlyExternal = true;
+    } else {
+      mySwiper.params.onlyExternal = false;
+    }
+
   }
 });
 
-$("#vio").ckTransform("scale(1.2)");
 
-$(".swiper-move-page").on('swipeUp', function (e) {
-  if ($('.movel').is(":visible")) {
-    mySwiper.slideNext();
-  } else {
-    $('.movel').show();
-  }
-})
-.on('swipeDown', function () {
-  if ($('.movel').is(":visible")) {
-    $('.movel').hide();
-  } else {
-    mySwiper.slidePrev();
-  }
-})
+$(".swiper-move-page")
+  .on('swipeUp', function (e) {
+    if ($('#flipper').hasClass("flip")) {
+      mySwiper.slideNext();
+    } else {
+      $('#flipper').addClass('flip');
+    }
+
+  })
+  .on('swipeDown', function (e) {
+    if ($('#flipper').hasClass("flip")) {
+      $('#flipper').removeClass('flip');
+    }else{
+      mySwiper.slidePrev();
+    }
+
+  })

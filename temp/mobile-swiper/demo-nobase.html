@@ -3,7 +3,38 @@
 <head>
   <meta charset="utf-8">
   <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <script type="text/javascript">
+    <!--
+    +(function(){
+      'use strict';
+      var Fixmobile = function  () {
+        this.viwep();
+      }
+      Fixmobile.width = 640;
+
+      Fixmobile.prototype.viwep = function  (e) {
+        var phoneWidth = parseInt(window.screen.width),
+          phoneScale = phoneWidth/Fixmobile.width,
+          ua = navigator.userAgent,
+          headmate;
+        if (/Android (\d+\.\d+)/.test(ua)){
+          var version = parseFloat(RegExp.$1);
+          // andriod 2.3
+          if(version > 2.3){
+            document.write('<meta name="viewport" content="width=' + Fixmobile.width + ', minimum-scale = ' + phoneScale + ', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+            // andriod 2.3以上
+          }else{
+            document.write('<meta name="viewport" content="width=' + Fixmobile.width + ', target-densitydpi=device-dpi">');
+          }
+          // 其他系统
+        } else {
+          document.write('<meta name="viewport" content="width=' + Fixmobile.width + ', user-scalable=no, target-densitydpi=device-dpi">');
+        }
+      }
+      var newviewport = new Fixmobile();
+    })();
+    //-->
+  </script>
   <link rel="stylesheet" href="../../asset/normalize/normalize-v3.css">
   <link rel="stylesheet" href="../../asset/cukiui/effect.css"/>
   <link rel="stylesheet" href="../../asset/swiper/swiper.min.css">
@@ -15,7 +46,7 @@
 <div class="swiper-container" data-iod="21">
   <div class="swiper-wrapper">
     <div class="swiper-slide swiper-move-first" style="background:#333;"></div>
-    <div class="swiper-slide swiper-move-page" style="background:#666;">
+    <div class="swiper-slide" style="background:#666;">
       <div class="item-ground">
         <p class="itembk tran pos-up">上滑</p>
         <p class="itembk tran pos-down">下滑</p>
@@ -23,7 +54,16 @@
         <p class="itembk tran pos-right opa">右次</p>
       </div>
     </div>
-    <div class="swiper-slide" style="background:#999;"></div>
+    <div class="swiper-slide swiper-move-page" style="background:#999;">
+      <div class="flipper" id="flipper">
+        <div class="front">
+          <div class="" style="display: block;"></div>
+        </div>
+        <div class="back">
+          <div class="" style="z-index: 1;"></div>
+        </div>
+      </div>
+    </div>
     <div class="swiper-slide" style="background:#e33;"></div>
     <div class="swiper-slide" style="background:#fc0;"></div>
     <div class="swiper-slide" style="background:#6c0;"></div>
@@ -32,9 +72,10 @@
 
   <div class="swiper-pagination"></div>
 </div>
-<div id="vio"></div>
+<div class="arrow-down"></div>
 
 <script type="text/javascript" src="../../asset/jquery/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="../../asset/cukiui/moblieTouch.js"></script>
 <script type="text/javascript" src="../../asset/swiper/swiper.jquery.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
 

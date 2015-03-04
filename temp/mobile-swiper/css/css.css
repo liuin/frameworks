@@ -8,11 +8,11 @@ body {   background: #fff;   font-family: Helvetica Neue, Helvetica, Arial, sans
 .tran {transition: 0.6s;}
 
 /*-- item-ground --*/
-.item-ground {width:150px; margin:0 auto;}
-.itembk {background:#f60; width:150px; height:150px; float:left;}
+.item-ground {width:auto; margin:0 auto;}
+.itembk {background:#f60; width:auto; height:80px;}
 
-.pos-left {transform: translate3d(-100%,0,0);}
-.pos-right {transform:translate3d(100%,0,0);}
+.pos-left {transform: translate3d(-100%,0,0);  transition-delay: 0.5s; -webkit-transition-delay: 0.5s;}
+.pos-right {transform:translate3d(100%,0,0); transition-delay: 0.5s; -webkit-transition-delay: 0.5s;}
 .pos-down {transform:translate3d(0,100%,0);}
 .pos-up {transform:translate3d(0,-100%,0);}
 .opa {opacity:0;}
@@ -24,3 +24,26 @@ body {   background: #fff;   font-family: Helvetica Neue, Helvetica, Arial, sans
 .swiper-slide-active .pos-up {transform: translate3d(0,0,0);}
 
 .swiper-slide-active .opa{opacity:1;}
+
+/* arrow-down */
+.arrow-down {position: fixed; left: 50%; z-index: 100; bottom: 10px; text-align:center; animation:2s ease arrow; -webkit-animation:2s ease arrow; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; width: 50px; height: 50px; margin-left: -25px;  }
+.arrow-down:after {content: " "; position: absolute; border-top: 25px solid #f60; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 25px solid transparent; margin-left: -25px;}
+
+@keyframes arrow{
+  0%{transform:translateY(0px); opacity:1; }
+  50% {transform:translateY(15px); opacity:0.5; }
+  100%{transform:translateY(0px); opacity:1;}
+}
+
+@-webkit-keyframes arrow{
+  0%{-webkit-transform:translateY(0px); opacity:1; }
+  50% {-webkit-transform:translateY(15px); opacity:0.5; }
+  100%{-webkit-transform:translateY(0px); opacity:1;}
+}
+
+.flip-container { width:320px; height:300px; top:50%; left:50%; margin:-150px 0 0 -160px; -webkit-transition:opacity .5s ease-out; transition:opacity .5s ease-out; opacity:0; -webkit-perspective:1000; perspective:1000 }
+.flipper { position:relative; width:267px; height:300px; margin:0 auto; -webkit-transform-style:preserve-3d; transform-style:preserve-3d; -webkit-transform-origin:100% 150px; transform-origin:100% 150px; -webkit-transition:all 1s linear; transition:all 1s linear }
+.flip { -webkit-transform:rotateX(180deg); transform: rotateX(180deg); }
+.back, .front { backface-visibility:hidden; position:absolute; top:0; left:0; width:300px; height: 300px;}
+.front { z-index:2; opacity:1; background : #f60;}
+.back { -webkit-transform:rotateX(-180deg); transform:rotateX(-180deg);  background: #f00;}
