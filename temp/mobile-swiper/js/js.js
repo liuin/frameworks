@@ -27,18 +27,28 @@ var mySwiper = new Swiper('.swiper-container', {
 });
 
 
-$(".swiper-move-page")
+$('.swiper-move-page')
   .on('swipeUp', function (e) {
     if ($('#flipper').hasClass("flip")) {
       mySwiper.slideNext();
     } else {
       $('#flipper').addClass('flip');
-    }
+      setTimeout(
+        function(){
+          $(".back").css("z-index","2");
+          $(".front").css("z-index","3");
+        }, 500)
 
+    }
   })
   .on('swipeDown', function (e) {
     if ($('#flipper').hasClass("flip")) {
       $('#flipper').removeClass('flip');
+      setTimeout(
+        function(){
+          $(".back").css("z-index","3");
+          $(".front").css("z-index","2");
+        }, 500)
     }else{
       mySwiper.slidePrev();
     }
