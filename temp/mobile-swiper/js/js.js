@@ -44,3 +44,12 @@ $(".swiper-move-page")
     }
 
   })
+$('#arrow-down').on('tap',function(){
+  if(mySwiper.params.onlyExternal == false){
+    mySwiper.slideNext();
+  }else{
+    $(".swiper-move-page").trigger('swipeUp');
+  }
+})
+
+$('#loading').fadeOut();

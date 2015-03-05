@@ -36,33 +36,50 @@
     //-->
   </script>
   <link rel="stylesheet" href="../../asset/normalize/normalize-v3.css">
+  <link rel="stylesheet" href="../../asset/font-awesome/font-awesome-min.css">
   <link rel="stylesheet" href="../../asset/cukiui/effect.css"/>
   <link rel="stylesheet" href="../../asset/swiper/swiper.min.css">
   <link rel="stylesheet" href="css/css.css">
 
 </head>
 <body>
-
-<div class="swiper-container" data-iod="21">
+<div class="loading" id="loading">
+  <span class="load-icon">
+    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom"></i>
+  </span>
+</div>
+<div class="swiper-container w640">
   <div class="swiper-wrapper">
-    <div class="swiper-slide swiper-move-first" style="background:#333;"></div>
+    <div class="swiper-slide swiper-move-first" style="background:#333;">
+      <div class="pos-center">
+        <div class="block">
+          <p>fsdfafdfsafafa</p>
+          <p>fsdfafdfsafafa</p>
+          <p>fsdfafdfsafafa</p>
+        </div>
+      </div>
+    </div>
     <div class="swiper-slide" style="background:#666;">
       <div class="item-ground">
-        <p class="itembk tran pos-up">上滑</p>
-        <p class="itembk tran pos-down">下滑</p>
-        <p class="itembk tran pos-left opa">左进</p>
-        <p class="itembk tran pos-right opa">右次</p>
+        <p class="itembk tran move-up opa">上滑</p>
+        <p class="itembk tran move-down opa">下滑</p>
+        <p class="itembk tran move-left opa">左进</p>
+        <p class="itembk tran move-right opa">右次</p>
+        <p class="itembk tran circle-zoom opa"></p>
       </div>
     </div>
     <div class="swiper-slide swiper-move-page" style="background:#999;">
-      <div class="flipper" id="flipper">
-        <div class="front">
-          <div class="" style="display: block;"></div>
-        </div>
-        <div class="back">
-          <div class="" style="z-index: 1;"></div>
+      <div class="pos-center">
+        <div class="flipper" id="flipper">
+          <div class="front">
+            <div class="" style="display: block;"></div>
+          </div>
+          <div class="back">
+            <div class="" style="z-index: 1;"></div>
+          </div>
         </div>
       </div>
+
     </div>
     <div class="swiper-slide" style="background:#e33;"></div>
     <div class="swiper-slide" style="background:#fc0;"></div>
@@ -72,7 +89,7 @@
 
   <div class="swiper-pagination"></div>
 </div>
-<div class="arrow-down"></div>
+<div class="arrow-down" id="arrow-down"></div>
 
 <script type="text/javascript" src="../../asset/jquery/jquery-1.11.2.js"></script>
 <script type="text/javascript" src="../../asset/cukiui/moblieTouch.js"></script>
