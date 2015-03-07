@@ -63,3 +63,6 @@ $('#arrow-down').on('tap',function(){
 })
 
 $('#loading').fadeOut();
+
+//ckbxo
+$(".form-checkbox").formCheckbox();
